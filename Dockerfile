@@ -1,6 +1,6 @@
 # Build with: docker buildx build -t carlosedp/arm_exporter:latest --platform linux/arm,linux/arm64 -f Dockerfile --push .
 # Builder container
-FROM --platform=$BUILDPLATFORM golang:1.17 AS builder
+FROM golang:1.17 AS builder
 ARG TARGETPLATFORM
 ARG TARGETOS
 ARG TARGETARCH
